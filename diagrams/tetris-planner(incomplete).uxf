@@ -1,0 +1,107 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>340</x><y>90</y><w>210</w><h>190</h></coordinates><panel_attributes>Day
+--
+- id: long
+- tasks: Tasks
+- exams: Exams
+- month: Month
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>710</x><y>90</y><w>210</w><h>190</h></coordinates><panel_attributes>Month
+--
+- id: long
+- days: List&lt;Day&gt;
+- year: Year</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1080</x><y>90</y><w>210</w><h>190</h></coordinates><panel_attributes>Year
+--
+- id: long
+- months: List&lt;Month&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>410</y><w>210</w><h>190</h></coordinates><panel_attributes>Schedule
+--
+- id: long
+- from: Time
+- to: Time
+- day: Enum
+- </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>710</x><y>410</y><w>210</w><h>190</h></coordinates><panel_attributes>Agenda
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1080</x><y>410</y><w>210</w><h>190</h></coordinates><panel_attributes>Grade
+--
+- grade: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>720</y><w>210</w><h>190</h></coordinates><panel_attributes>Subject
+--
+- id: long
+- subjectName: String 
+- teacher: Teacher</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>710</x><y>720</y><w>210</w><h>190</h></coordinates><panel_attributes>Task
+--
+- id: long
+- priority: 
+- description: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1450</x><y>90</y><w>210</w><h>190</h></coordinates><panel_attributes>Exam
+--
+- id: long
+- title: String
+- date: Date</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1450</x><y>410</y><w>210</w><h>190</h></coordinates><panel_attributes>Attendance
+--
+- date: Date
+- time: Time
+- type: Enum</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1080</x><y>720</y><w>210</w><h>290</h></coordinates><panel_attributes>Teacher
+--
+- surName: String
+- lastName: String
+- birthDate: Date
+- subject: Subject
+- phone: String (Regex)
+- mail: String (Regex)
+- address: String (Regex)
+- officeDay: Enum
+- officeTime: Enum </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1450</x><y>720</y><w>210</w><h>190</h></coordinates><panel_attributes>Recording
+--
+- id: long
+- audio: AudioStream
+- date: Date</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>1030</y><w>210</w><h>190</h></coordinates><panel_attributes>Memo
+--
+- date: Date
+- description: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>170</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1..n
+m2=1..1
+</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>910</x><y>170</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1..n
+m2=1..1
+</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>500</x><y>270</y><w>230</w><h>540</h></coordinates><panel_attributes>lt=-
+m1=1..1
+m2=0..n
+</panel_attributes><additional_attributes>10;10;10;50;160;50;160;510;210;510</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>0</y><w>1120</w><h>110</h></coordinates><panel_attributes>lt=-
+m1=1..1
+m2=0..n
+</panel_attributes><additional_attributes>10;90;10;20;1080;20;1080;90</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>840</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=-
+m1=0..1
+m2=0..1</panel_attributes><additional_attributes>10;10;170;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>710</x><y>1030</y><w>210</w><h>190</h></coordinates><panel_attributes>Priority
+--
+- priority: Enum</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>730</x><y>1130</y><w>170</w><h>70</h></coordinates><panel_attributes>There will be 3 priorities
+low
+medium
+high
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>900</y><w>50</w><h>150</h></coordinates><panel_attributes>lt=-
+m1=0..1
+m2=0..1</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>670</y><w>790</w><h>70</h></coordinates><panel_attributes>lt=-
+m1=1..1
+m2=1..1</panel_attributes><additional_attributes>750;50;750;10;10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>360</y><w>680</w><h>450</h></coordinates><panel_attributes>lt=-
+m1=1..n
+m2=1..1</panel_attributes><additional_attributes>640;50;640;10;50;10;50;420;10;420</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1100</x><y>514</y><w>170</w><h>70</h></coordinates><panel_attributes>bg=blue
+A grade can be a number or
+even a letter
+A - F (American)
+1 - 6 (Swiss)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>270</y><w>1250</w><h>470</h></coordinates><panel_attributes>lt=-
+m1=1..1
+m2=0..n
+</panel_attributes><additional_attributes>10;450;10;390;1040;390;1040;50;1210;50;1210;10</additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>270</y><w>50</w><h>160</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=0..1</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>590</y><w>1030</w><h>150</h></coordinates><panel_attributes>lt=-
+m1=1..n
+m2=1..1
+</panel_attributes><additional_attributes>10;130;10;50;990;50;990;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1100</x><y>930</y><w>170</w><h>70</h></coordinates><panel_attributes>bg=blue
+Subject and Teacher is 
+Bidirectional</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>550</y><w>80</w><h>260</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=0..1</panel_attributes><additional_attributes>60;230;10;230;10;10;60;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>400</x><y>520</y><w>140</w><h>70</h></coordinates><panel_attributes>bg=blue
+Day is an enum for the
+days of the week.
+Mon, Tue, Wed, Thu, Fri,
+Sat, Sun</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1480</x><y>520</y><w>140</w><h>70</h></coordinates><panel_attributes>bg=blue
+Attendance types can
+range from
+Absence - Delay - Exit
+Consider Justification***</panel_attributes><additional_attributes></additional_attributes></element></diagram>
